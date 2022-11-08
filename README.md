@@ -104,8 +104,8 @@ Pin | GPIO | Function
 
 ## Notes
 
-- The path to the video file storage is set at the top of the script. Look for the variable `videodir`. The USB flash drive can be eliminated by storing the videos on the microSD card (e.g., in `/home/pi/Videos`). We believe our museum staff will be more successful copying files to a familiar, VFAT-formatted USB flash drive using almost any computer (Windows, Mac, Linux) than they would with a tiny microSD card containing a ext4-formatted file system on a PC running Linux.
-- The USB flash disk volume name can be changed. Remember to change `videodir` in `exhibit-player.py` and adjust the installation instructions as appropriate.
+- The path to the video file storage is set near the top of the script. Look for the variable `videodir`. The USB flash drive can be eliminated by storing the videos on the microSD card (e.g., in `/home/pi/Videos`). We believe our museum staff will be more successful copying files to a familiar, VFAT-formatted USB flash drive using almost any computer (Windows, Mac, Linux) than they would with a tiny microSD card containing a ext4-formatted file system on a PC running Linux.
+- The USB flash disk volume name can be changed. Remember to change `videodir` in `exhibit-player.py`, the startup script (Start-exhibit-player.sh), and adjust the installation instructions as appropriate.
 - Recommended: Restrict file names to use characters a-z, A-Z, 0-9, underscore, hyphen, and period. No testing has been done with file names containing special characters or spaces.
 - Recommended: Restrict USB flash drive volume names to use characters a-z, A-Z, and 0-9.
 - Additional buttons can be added with relatively simple changes to the script.

@@ -4,17 +4,26 @@
 #
 # Dale Newby
 # March 2021
+#
+# Accept the USB flash disk mount point from the command line.
+# dkn November 2022
 
 import vlc
 import time
+import sys
 import os
 from gpiozero import Button
 from subprocess import check_call
 
-videodir = '/media/pi/USBDISK/Videos'   # directory containing the video files
 delay = 0.3     # short delay to ensure video is playing
 
 video_index = 0     # index into list of videos
+
+# Directory containing the video files
+if len(sys.argv) == 2:
+    videodir = sys.argv[1] + "/Videos"
+else:
+    videodir = '/media/pi/USBDISK/Videos'  # backwards compatible default
 
 # Define the Raspberry Pi GPIO pins used; additional info at:
 # https://www.raspberrypi.org/documentation/usage/gpio/
